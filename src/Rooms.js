@@ -1,49 +1,3 @@
-//import React, { useEffect, useState } from "react";
-//import axios from "axios";
-//import { useParams } from "react-router-dom";
-//import "./Rooms.css"
-//
-//function Rooms() {
-//  const { area } = useParams();
-//  const [rooms, setRooms] = useState([]);
-//
-//  //useEffect(() => {
-//  //  axios.get(`http://localhost:5000/rooms/${area}`).then((res) => setRooms(res.data));
-//  //}, [area]);
-//
-//  useEffect(() => {
-//    axios.get(`http://localhost:5000/rooms/${area}`)
-//      .then((res) => {
-//        console.log(`rooms for ${area}:`, res.data);
-//        setRooms(res.data)
-//      })
-//      .catch((err) => console.error("Error fetching rooms:", err));
-//  }, [area]);
-//  return (
-//    <div className="rooms-container">
-//      <h2 className="rooms-heading">Rooms in {area}</h2>
-//      {rooms.length === 0 ? (<p>No rooms available</p>)
-//        : (
-//          <div className="rooms-grid">
-//            {rooms.map((room) => (
-//              <div key={room.id} className="room-item">
-//                <h3><strong>{room.name}</strong></h3>
-//                <img src={"http://localhost:3000" + room.image} alt="room img" width="200" className="room-image" />
-//                <p><strong>Rating:</strong> {room.rating} ⭐</p>
-//                <p><strong>Price: </strong>${room.price}/night</p>
-//                <button className="room-button" onClick={() => alert("Payment Successful!")}>Book Now</button>
-//
-//              </div>
-//            ))}
-//          </div>
-//        )}
-//    </div>
-//  );
-//}
-//
-//export default Rooms;
-
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -65,7 +19,7 @@ function Rooms() {
       .catch((err) => console.error("Error fetching rooms:", err));
   }, [area]);
 
-  // Function to handle "Book Now" click
+  // Function "Book Now"
   const handleBookNow = () => {
     setShowModal(true);
     setPaymentMethod(null);
@@ -73,7 +27,7 @@ function Rooms() {
     setOtp("");
   };
 
-  // Function to handle payment method selection
+  // Function payment method 
   const handlePaymentSelection = (method) => {
     setPaymentMethod(method);
 
@@ -83,18 +37,18 @@ function Rooms() {
     }
   };
 
-  // Function to generate OTP
+  // Function- OTP
   const generateOtp = () => {
     if (phoneNumber.length === 10) {
       const newOtp = Math.floor(1000 + Math.random() * 9000).toString();
       setGeneratedOtp(newOtp);
-      alert(`Your OTP is: ${newOtp}`); // Simulate OTP sent to phone
+      alert(`Your OTP is: ${newOtp}`); 
     } else {
       alert("Enter a valid 10-digit phone number.");
     }
   };
 
-  // Function to verify OTP
+  // Function- verify OTP
   const verifyOtp = () => {
     if (otp === generatedOtp) {
       alert("Payment Successful!");
