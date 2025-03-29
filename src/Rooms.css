@@ -1,6 +1,6 @@
-/* Rooms.css */
+
 .rooms-container {
-    background-color: #FFDDC1; /* Pastel background */
+    background-color: #FFDDC1; 
     min-height: 100vh;
     width: 100vw;
     display: flex;
