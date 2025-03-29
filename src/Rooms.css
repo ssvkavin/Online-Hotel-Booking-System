@@ -1,0 +1,103 @@
+/* Rooms.css */
+.rooms-container {
+    background-color: #FFDDC1; /* Pastel background */
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .rooms-heading {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  .room-item {
+    font-size: 18px;
+    padding: 15px;
+    background-color: #FFABAB;
+    border-radius: 10px;
+    margin: 10px 0;
+    color: white;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .room-item:hover{
+    transform: scale(1.05);
+  }
+  .room-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .room-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff8b8b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .room-button:hover {
+    background-color: #ff6b6b;
+  }
+  /* Payment Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .modal-button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #ff8b8b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-button:hover {
+    background-color: #ff6b6b;
+  }
+  
+  input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 80%;
+    border: 1px solid #7c7c7c;
+    border-radius: 5px;
+  }

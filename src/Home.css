@@ -1,0 +1,36 @@
+/* Home.css */
+.home-container {
+    background-color: #FFDDC1; /* Pastel background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .home-heading {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .home-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .home-list-item {
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #FFABAB;
+    border-radius: 5px;
+    margin: 5px 0;
+    color: white;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .home-list-item:hover {
+    background-color: #ff8b8b;
+  }
