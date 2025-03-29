@@ -1,6 +1,6 @@
-/* Home.css */
+
 .home-container {
-    background-color: #FFDDC1; /* Pastel background */
+    background-color: #FFDDC1; 
     height: 100vh;
     display: flex;
     flex-direction: column;
