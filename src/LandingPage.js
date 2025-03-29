@@ -1,5 +1,5 @@
 import React from "react";
-import "./LandingPage.css"; // Import the CSS file
+import "./LandingPage.css"; 
 import { useNavigate } from "react-router-dom";
 import bgImage from "../src/images/bg5.jpg"
 const LandingPage = () => {
