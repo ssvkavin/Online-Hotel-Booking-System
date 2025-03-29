@@ -17,12 +17,6 @@ function Home() {
     
   }, []);
 
-  //useEffect(() => {
-  //  axios.get("http://localhost:5000/areas")
-  //    .then((res) => setAreas(res.data))
-  //    .catch((err) => console.error("Error fetching areas:", err));
-  //}, []);
-
   return (
     <div className="home-container">
       <h2 className="home-heading">Available Areas</h2>
